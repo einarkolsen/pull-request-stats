@@ -10,3 +10,6 @@ jobs:
     steps:
       - name: Run pull request stats
         uses: flowwer-dev/pull-request-stats@master
+        with:
+          repositories: 'flowwer-dev/pull-request-stats,einarkolsen/dot-files,einarkolsen/pull-request-stats'
+          token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
