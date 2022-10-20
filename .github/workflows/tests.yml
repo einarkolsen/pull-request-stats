@@ -1,20 +1,12 @@
-name: Tests
-on: [push]
+name: Pull Request Stats
+
+on:
+  pull_request:
+    types: [opened]
 
 jobs:
-  tests:
-
-    runs-on: ${{ matrix.os }}
-    strategy:
-      matrix:
-        node-version: [16.x]
-        os: [ubuntu-latest]
-
+  stats:
+    runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v1
-      with:
-        node-version: ${{ matrix.node-version }}
-    - run: yarn install --frozen-lockfile
-    - run: yarn test
+      - name: Run pull request stats
+        uses: flowwer-dev/pull-request-stats@master
