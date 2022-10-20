@@ -9,7 +9,7 @@ The objective of this action is to:
 
 * Reduce the time taken to review the pull requests.
 * Encourage quality on reviews.
-* Help deciding which people to assign as reviewers.
+* Help deciding which people to assign as reviewers.   
 
 Running this action will add a section at the bottom of your pull requests description:
 
